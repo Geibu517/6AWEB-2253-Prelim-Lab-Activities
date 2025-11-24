@@ -1,0 +1,52 @@
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #c8b6ff, #e7c6ff);
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(150, 100, 200, 0.25);
+  margin-bottom: 1.5rem;
+}
+
+/* Remove default link styling */
+nav a {
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #5a189a; /* deep purple for readability */
+  position: relative;
+  padding: 0.3rem 0.6rem;
+  transition: color 0.3s ease;
+}
+
+/* Unique hover underline animation */
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0%;
+  height: 3px;
+  background: #7b2cbf;
+  border-radius: 6px;
+  transition: width 0.3s ease;
+}
+
+nav a:hover {
+  color: #7b2cbf;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* Responsive behavior */
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    gap: 0.8rem;
+    padding: 1rem;
+  }
+}
