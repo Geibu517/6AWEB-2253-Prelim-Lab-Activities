@@ -1,0 +1,70 @@
+:host {
+  display: block;
+  padding: 40px 20px;
+  background: #fffdfa;
+  font-family: 'Poppins', sans-serif;
+}
+
+h2 {
+  color: #ff3b30;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+}
+
+/* Grid layout for products */
+.products-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Product card styling */
+.product-card {
+  border: 3px solid #1e90ff;
+  box-shadow: 0 6px 12px rgba(30,144,255,0.25);
+  border-radius: 12px;
+  padding: 20px;
+  width: 280px;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.3s;
+  background: #ffffff;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(30,144,255,0.35);
+}
+
+.card-title {
+  color: #ff3b30;
+  font-weight: 700;
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+}
+
+.price {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: #2b2b2b;
+}
+
+/* Stock badges */
+.stock {
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 8px;
+  display: inline-block;
+  font-size: 0.95rem;
+}
+
+.stock.in {
+  background: #74e774;
+  color: #0a460a;
+}
+
+.stock.out {
+  background: #ffb3b3;
+  color: #7a0202;
+}

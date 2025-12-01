@@ -1,0 +1,80 @@
+/* Navbar container */
+.navbar {
+  background: #1e90ff;
+  padding: 12px 20px;
+  border-bottom: 6px solid #ffcc00;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  font-family: 'Poppins', sans-serif;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Flex container for logo + links */
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Logo styling */
+.nav-logo {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #fff;
+  text-decoration: none;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+/* Navigation links container */
+.nav-links a {
+  color: #ffffff;
+  font-weight: 600;
+  margin: 0 15px;
+  font-size: 1.1rem;
+  text-decoration: none;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect with underline animation */
+.nav-links a::after {
+  content: "";
+  display: block;
+  height: 3px;
+  background: #ffcc00;
+  width: 0;
+  transition: width 0.3s;
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  border-radius: 2px;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-links a:hover {
+  color: #ffcc00;
+}
+
+/* Responsive: stack links on small screens */
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav-links a {
+    margin: 8px 0;
+  }
+}

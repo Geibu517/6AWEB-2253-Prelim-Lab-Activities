@@ -1,0 +1,16 @@
+<h2>Pokémon TCG Packs</h2>
+
+<div class="products-grid">
+  @for (item of products; track item.name) {
+    <div class="product-card">
+      <h3 class="card-title">{{ item.name }}</h3>
+      <p class="price">Price: ₱{{ item.price }}</p>
+
+      @if (item.stock > 0) {
+        <p class="stock in">In Stock: {{ item.stock }}</p>
+      } @else {
+        <p class="stock out">Out of Stock</p>
+      }
+    </div>
+  }
+</div>
